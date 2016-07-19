@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="twitterApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Twitter Generator</title>
+    <link rel="stylesheet" href="../styles/stylesheet.css">
+    <script src="../vendors/angular/angular.min.js" charset="utf-8"></script>
+    <script src="../scripts/twitter.module.js" charset="utf-8"></script>
+    <script src="../scripts/MainController.js" charset="utf-8"></script>
+
+  </head>
+  <body ng-controller="MainController as main">
+    <button ng-click="main.randomNames()">Generate</button>
+    <div ng-repeat="name in main.usernames">
+      <a ng-href="http://twitter.com/{{name}}">{{name}}</a>
+</div>
+
+  </body>
+</html>
